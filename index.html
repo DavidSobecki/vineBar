@@ -8,89 +8,93 @@
     <title>Vine Bar</title>
 </head>
 <body>
+<header>
     <nav>
-        <div class="menu-wrap">
-            <div class="logo"></div> <!--Make logo-->
-            <input type="checkbox" class="toggler">
-            <div class="hamburger"><div></div></div> <!--Mabey jquery-->
-                <div class="menu">
-                    <div>
-                        <div>
-                            <ul class="nav_links">
-                                <li><a href="#">Vine Bar Tour De France</a></li>
-                                <li><a href="#">Information</a></li>
-                                <li><a href="#">Menu</a></li>
-                                <li><a href="#">Our Story</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Gift Cards</a></li>
-                                <li><a href="#">Events</a></li>
-                                <li><a href="#">Email Signup</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <!-- Bottom sticky bar -->
+        <div class="reservations-bar">
+            <a href="#" class="btn">Call 555-5555</a>
+            <a href="#" class="btn">Reservations</a>
         </div>
-
         
+            <h1 class="logo"><span>Vine</span>Bar</h1>
+        
+            <div class="site-nav">
+                <ul>
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Email Signup</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+    
     </nav>
+</header>
 
-    <!-- Header -->
-    <header class="showcase" class="grid">
-            <div class="bg-image1"></div>
-                <div class="content-wrap">
-                    
-                    
-                </div>  
-    </header>
+    <section class="showcase">
+        <a href="#" class="street">555 Main St, Detroit, MI 48555</a>
+    </section>
 
-    <!-- Main area -->
-    <main class="main">
-        <!-- Section A -->
-        <section class="section-a"> <!--Resize all images-->
-            <div class="grid">
-                <img src="/img/wine.jpg" alt="couple toasting with red wine">
-            </div>
-            <div class="grid">
-                <img src="/img/food.jpg" alt="above view of a feast, small plates with wine">
-            </div>
-            <div class="grid">
+    <!-- Section A -->
+    <section class="section-a grid"> 
+        <div class="img">
+            <img src="/img/wine.jpg" alt="couple toasting with red wine">
+        </div>
+        <div class="img">
+            <img src="/img/food.jpg" alt="above view of a feast, small plates with wine">
+        </div>
+        
+            <div class="card">
                 <div class="card-content">
                     <h2 class="card-title">Team</h2>
-                    <div class="banner"></div> <!-- Find design --> 
-                    <p>...Chef de Cuisine</p> <!-- add names and spacing-->
+                    <div class="banner"></div> 
+                    <p>...Chef de Cuisine</p> 
                     <p>...Sommelier</p>
                 </div>
             </div>
-            <div class="grid">
-                <img src="/img/sommelier.jpg" alt="">
-            </div>
-            <div class="grid">
-                <img src="/img/chef.jpg" alt="">
-            </div>
-            <div class="card-content">
-                    <h2 class="card-title">Chefs Name</h2>
-                    <div class="banner"></div> <!-- Find design --> 
-                    <p>...achievements</p> <!-- add achievements and spacing-->
-                    <p>...achievements</p>
-                </div>
-        </section>
+        
+        <div class="img">
+            <img src="/img/team.jpg" alt=""> <!--Change to team-->
+        </div>
 
-        <!-- Section B -->
-        <section class="section-b">
-            <div class="bg-image2"></div>
-                <div class="card-content">
-                    <h2 class="card-title">Experience Vine Bar</h2>
-                    <a href="#" class="btn">Location & Hours</a>
-                </div>
-        </section>
-    </main>
+       <div class="img">
+            <img src="/img/chef.jpg" alt="">
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h2 class="card-title">Chefs Name</h2>
+                <div class="banner"></div> 
+                <p>...achievements</p> 
+                <p>...achievements</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section B -->
+    <section class="section-b">
+        <div class="section-b--box">
+        <h1>Experience<br> Vine Bar</h1>
+        
+            <a href="#" class=btn>Location & Hours</a>
+        </div>
+    </section>
+    
 
     <footer>
-        <!-- add instagram font awesome -->
+        
         <a href="#" class="btn">Email Signup</a>
     </footer>
-        
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>   
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

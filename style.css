@@ -1,0 +1,283 @@
+:root {
+    --highlight-color: #E9C55E;
+    --text-color: #EBEBD3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: black;
+    color: var(--highlight-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: .8em 2em;
+    background: black;
+    color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--highlight-color);
+    box-shadow: 2px 2px black;
+}
+
+
+.reservations-bar {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.reservations-bar .btn {
+    width: 100%;
+}
+
+/* Top Nav Bar */
+/* .container {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+} */
+
+header {
+    background: black;
+    padding: 1.6em 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+/* clear-fix */
+header:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.logo {
+    float: left;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background: transparent;
+    padding-left: 2em;
+}
+
+.logo span {
+    background: transparent;
+    font-weight: 300;
+}
+
+.site-nav {
+    position: absolute;
+    background: transparent;
+    top: 0;
+    right: 0;
+    /* height: 0px;  */
+    width: 0px;
+    overflow: hidden;
+}
+
+.site-nav--open {
+    /* height: auto; */
+    width: 100%;
+}
+
+.site-nav a {
+    color: var(--text-color);
+    display: block;
+    padding: 1.5em 4em 2em 2em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .3em;
+    font-weight: 500;
+}
+
+.site-nav ul:first-child {
+    padding-top: 5em;
+}
+
+.site-nav ul:last-child {
+    padding-bottom: 5em;
+}
+
+ .site-nav a:hover,
+ .site-nav a:focus,
+ .btn:hover { 
+    color: var(--highlight-color);
+} 
+
+.menu-toggle {
+    padding: 1em;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    display: block;
+    background: var(--highlight-color);
+    height: 3px;
+    width: 1.5em;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+.open .hamburger {
+    transform: rotate(45deg)
+    
+}
+
+.open .hamburger::before {
+    opacity: 0;
+  
+}
+
+.open .hamburger::after {
+    transform: translateY(-3px) rotate(-90deg);
+}
+
+.open .hover a {
+    color: var(--highlight-color);
+}
+
+.showcase {
+    width: 100%;
+    height: 87vh;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, .5)),
+    url(/img/showcase.jpg) center/cover;
+}
+
+.street {
+    color: var(--text-color);
+    background: transparent;
+    width: 100%;
+    top: 85px;
+    text-align: center;
+    position: absolute;
+    font-style: italic;
+    font-weight: 100;
+  }
+
+  .grid img {
+    -webkit-filter: brightness(0.5); 
+    display: block;
+    filter: brightness(0.4); /* Fade img in ps */
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    /* padding: 30px; */
+    
+}
+
+.img:hover, /* add in jquery (dose not ease out)*/ 
+.card:hover {
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    transform: translate(0, -5px);
+
+}
+
+.card-content {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.card-content .card-title, p {
+    color: var(--text-color);
+}
+
+.section-b {
+    display: block;
+    width: 100%;
+    height: 84vh;
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),
+    url(/img/footer.jpg) center/cover;
+}
+
+.section-b--box {
+    position: absolute;
+    background: transparent;
+    margin-top: 11em;
+    width: 100%;
+    text-align: center;
+}
+
+.section-b--box h1 {
+    color: var(--text-color);
+    background: transparent;
+    margin-bottom: 3em;
+    font-size: 2em;
+    line-height: 2em;
+    letter-spacing: .2em;
+}
+
+ @media (min-width: 700px) {
+
+    header {   
+        background: transparent;
+    }
+
+    .logo {
+        font-size: 2em;
+        top: 50em;
+    }
+
+    .site-nav--open {
+        width: 40vw;
+        opacity: .80;
+    }
+
+    .menu-toggle {
+        background: transparent;
+    }
+
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.5em;
+        padding: 1em;
+    }
+
+    .section-b {
+        height: 100vh;
+    }
+
+  
+ }
+
+
